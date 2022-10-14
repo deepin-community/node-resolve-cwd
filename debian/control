@@ -1,0 +1,31 @@
+Source: node-resolve-cwd
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Raju Devidas <rajudev@disroot.org>
+Build-Depends:
+ debhelper-compat (= 13)
+ , dh-buildinfo
+ , nodejs
+Standards-Version: 4.1.4
+Homepage: https://github.com/sindresorhus/resolve-cwd#readme
+Vcs-Git: https://salsa.debian.org/js-team/node-resolve-cwd.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-resolve-cwd
+
+Package: node-resolve-cwd
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-resolve-from
+Description: Resolve the path of a module from current directory
+ This module can be used to determine the path of a module starting from the
+ current working directory.
+ .
+ For an input of moduleId to resolveCwd(moduleId), it gives an error when the
+ module can't be found, which is similar to how require() works.
+ .
+ If moduleId is called as resolveCwd.silent(moduleId) then it returns null
+ instead of giving an error when the module can't be found.
+ .
+ Node.js is an event-based server-side JavaScript engine.

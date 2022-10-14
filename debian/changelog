@@ -1,0 +1,38 @@
+node-resolve-cwd (2.0.0-4) unstable; urgency=medium
+
+  * Remove constraints unnecessary since buster:
+    + node-resolve-cwd: Drop versioned constraint on node-resolve-from in
+      Depends.
+  * Bump debhelper from old 12 to 13.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Wed, 15 Sep 2021 11:21:42 +0100
+
+node-resolve-cwd (2.0.0-3) unstable; urgency=medium
+
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sun, 29 Aug 2021 00:26:32 +0100
+
+node-resolve-cwd (2.0.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Paolo Greppi ]
+  * Update Vcs fields for migration to https://salsa.debian.org/
+
+  [ Pirate Praveen ]
+  * Bump Standards-Version to 4.1.4 (no changes needed)
+  * Bump debhelper compatibility level to 11
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 18 Jun 2018 14:46:44 +0530
+
+node-resolve-cwd (2.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #880457)
+
+ -- Raju Devidas <rajudev@disroot.org>  Wed, 01 Nov 2017 00:39:43 +0530
