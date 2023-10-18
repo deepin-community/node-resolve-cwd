@@ -1,0 +1,31 @@
+Description: replace ava by tape
+ This fix also values returned by reseolve-from 5
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-02-24
+
+--- a/test.js
++++ b/test.js
+@@ -1,16 +1,18 @@
+-import test from 'ava';
+-import resolveCwd from '.';
++const test = require('tape');
++const resolveCwd = require('.');
+ 
+ process.chdir('fixture');
+ 
+ test('resolveCwd()', t => {
+-	t.regex(resolveCwd('./fixture'), /fixture\/fixture\.js$/);
++	t.ok(resolveCwd('./fixture').match(/fixture\/fixture\.js$/));
+ 	t.throws(() => {
+ 		resolveCwd('./nonexistent');
+ 	});
++	t.end();
+ });
+ 
+ test('resolveCwd.silent()', t => {
+-	t.regex(resolveCwd.silent('./fixture'), /fixture\/fixture\.js$/);
++	t.ok(resolveCwd.silent('./fixture').match(/fixture\/fixture\.js$/));
+ 	t.is(resolveCwd.silent('./nonexistent'), undefined);
++	t.end();
+ });
